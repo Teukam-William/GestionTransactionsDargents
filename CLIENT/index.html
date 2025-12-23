@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/pageAcceuille.css">
+    <link rel="stylesheet" href="../CSS/client.css">
+    <title>CLIENT</title>
+</head>
+<body>
+    <div class="head">
+        <div class="boiteBtnDeconnexion">
+            <br/>
+        </div>
+        <h1>MOBIL BANKING</h1>
+    </div>
+    <div class="boiteInfoTrans">
+        <h2>TRANSACTIONS D'ARGENT MOBILE</h2>
+        <div class="boiteInfos">
+            <label for="numeroTel">Numéro de téléphone</label>
+            <input type="tel" name="numeroTel" class="numeroTel" id="numeroTel">
+            <br/>
+            <label for="montant">Montant</label>
+            <input type="number" name="montant" class="montant" id="montant">
+            <br/>
+            <p>Selectionnnez le type de transaction</p>
+            <div class="boiteRetraitOuDepot">
+                <div class="boiteDepot">
+                    <label for="depot">Dépot</label>
+                    <input type="radio" name="depotRetrait" id="depot" class="depotRetrait" value="Depot">
+                </div>
+
+                <div class="boiteRetrait">
+                    <label for="retrait">Retrait</label>
+                    <input type="radio" name="depotRetrait" id="retrait" class="depotRetrait" value="Retrait">
+                </div>
+            </div>
+            <br/>
+            <p>Selectionnez l'opérateur</p>
+            <div class="boiteOrangeouMtn">
+                <div class="boiteOrange">
+                    <label for="orange">Orange</label>
+                    <input type="radio" name="operateur" id="orange" class="orange" value="Orange">
+                </div>
+
+                <div class="boiteMtn">
+                    <label for="mtn">MTN</label>
+                    <input type="radio" name="operateur" id="mtn" class="mtn" value="MTN">
+                </div>
+            </div>
+            <br/>
+            <button class="btnDemarrer">Démarrer</button>
+        </div>
+    </div>
+<!-- PREMIER FENETRE POUR DEBUTER DONNER L'ETAT DE LA TRANSACTION -->
+    <aside id="modal" class="modalEtatTransaction" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="titre" >
+        <div class="boiteSuivitTransaction">
+            <h2>Transaction en cours de traitement...</h2>
+            <div class="etat">
+                <br/>
+                <br/>
+                <p>Ne partez pas avant d'avoir terminer la transaction et rassurez vous que votre transaction c'est bien effectuer !!!</p>
+            </div>
+        </div>
+    </aside>
+    <!-- FETRER POUR AVISER QUE LE RETRAIT EST IMPOSSIBLE -->
+
+    <aside id="modal" class="modalTransactionImpossible" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="titre" >
+        <div class="boiteSuivitTransaction">
+            <h2 class="h2Imp">NOUS NE DISPOSONS PAS DE CE MONTANT POUR LE MOMENT VEUILLEZ SAISIR UN MONTANT INFERIEUR SVP !!!</h2>
+            <button class="btnOKNouvMont">OK</button>
+        </div>
+    </aside>
+     
+    <!-- FENTRE POUR NOTIFIER QUE LE DEPOT C'EST BIEN TERMINER -->
+    <aside class="fenetreAlerteDepotTerm" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="titre" >
+        <div class="boiteAlerte">
+            <br/>
+            <div class="boiteTitre">
+                <h1 class="titreTransactionDepot">VOTRE TRANSACTION EST TERMINER <br/><br/> CCH VOUS REMERCI !!!</h1>
+            </div>
+            <br/>
+        </div>
+    </aside>
+      
+    <!-- FENTRE POUR NOTIFIER QUE LE DEPOT EST ANNULER -->
+    <aside class="fenetreAlerteDepotAnnuler" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="titre" >
+        <div class="boiteAlerte">
+            <br/>
+            <div class="boiteTitre">
+                <h1 class="titreTransactionDepot">VOTRE TRANSACTION A ETE ANNULER <br/><br/> CCH VOUS REMERCI !!!</h1>
+            </div>
+            <br/>
+        </div>
+    </aside>
+
+    <script src="../classeJS/Transaction.js"></script>
+    <script src="../classeJS/SessionClient.js"></script>
+</body>
+</html>

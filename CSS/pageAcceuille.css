@@ -1,0 +1,438 @@
+*
+{
+    margin :0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.head
+{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3%;
+    text-align : center;
+    width: 100%;
+    font-size: 110%;
+    color : white;
+    background:linear-gradient( to bottom, #007DEB, white);
+}
+.head >h1
+{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.boiteBtnDeconnexion
+{
+    width: 99%;
+    /* border: 1px solid black; */
+    padding: 2px;
+}
+.btnDeconnexion
+{
+    position: relative;
+    float: right;
+    flex: 0.05;
+    padding: 1%;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}
+h2
+{
+    text-align: center;
+    color: #007DEB;
+}
+.conteneurBoiteOpt
+{
+    display: flex;
+    justify-content: center;
+}
+.boiteDoption
+{
+    margin-top: 2%;
+    width: 90%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.boiteDoption > img
+{
+    width: 20%;
+}
+.boiteDoption > img :hover
+{
+    box-shadow : 0px 0px 5px #007deb6b;
+    border-radius: 10px;
+}
+
+.modaleGererMontant, .defMontantDepot, .fenetreGererClient, .fenetreModifierClient, .fenetreDepotSansAncaissement, .fenetreTransactionsJournaliere, .fenetreAlerteRetrait, .fenetreAlerteDepot, .fenetreEnrgTransc
+{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: green;
+    background: rgba(0, 0, 0, 0.668);
+}
+/* .defMontantDepot
+{
+    visibility:visible;
+} */
+.modalWrap, .modalWrapDepotSansAncaissement, .modalWrapTransactionsJournaliere
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.enteteMontantJr
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: space-between;
+    font-size: 110%;
+    /* border: 1px solid red; */
+}
+.enteteMontantJr > img
+{
+    width: 100px;
+}
+.boiteMontantCaiseTelephone
+{
+    margin-top: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 99%;
+}
+.boiteDepotOrange, .boiteDepotMtn, .boiteCaisse
+{
+    /* border: 2px solid green; */
+    width: calc(100% / 3);
+    margin: 4px;
+    color: white;
+    border-radius: 10px;
+}
+.boiteDepotOrange
+{
+    background-color: rgba(255, 166, 0, 0.63);
+}
+.boiteDepotMtn
+{
+    background-color: rgba(209, 206, 0, 0.685);
+}
+.boiteCaisse
+{
+    background-color: rgba(0, 162, 255, 0.568);
+}
+.titreDepot, .titreCaisse
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #0069c5;
+}
+.enteteMontantJr > .btnRetour
+{
+    width: 50px;
+    height: 50px;
+}
+.eltDepot, .eltCaisse
+{
+    /* border: 2px solid black; */
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size : 110%;
+}
+.valMonAct
+{
+    padding-top: 2%;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 6px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 220%;
+    overflow-x: scroll;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.defMont
+{
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+}
+.btnDefMont
+{
+    font-size: 120%;
+    padding: 1%;
+    width: 150px;
+    color: white;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px white;
+    background-color: #007DEB
+}
+/* ::::::::::::::::::::::::FENETRE POUR DEFINIR LES MONTANT JOURNALIER:::::::::::::::::::::::: */
+.boiteDefinitionMontantJournalier
+{
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+}
+.boiteValDefinire
+{
+    display: flex;
+    width: 70%;
+    padding: 1%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.boiteValDefinire > label
+{
+    font-style: italic;
+}
+.boiteValDefinire > input, .boiteValDefinire > select
+{
+    border: 1px solid #007DEB;
+    padding: 1%;
+    font-size: 110%;
+    width: 50%;
+    border-radius: 5px;
+}
+.ergMontJour
+{
+    font-size: 110%;
+    background-color: #007DEB;
+    border-radius: 5px;
+    color: white;
+    padding: 1%;
+}
+
+/* :::::::::::::::::::::::::::::::::CSS BOITE GESTION CLIENT::::::::::::::::::::::::::::::::::: */
+.boiteRechercheClient
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.rechercheClient, .rechercheTransaction ,.dateJourR
+{
+    border: 1px solid #007DEB;
+    border-radius: 10px;
+    width: 60%;
+    padding: 1.5%;
+    font-size: 120%;
+}
+.listeClient , .listeTransactions
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom : 2%;
+    margin-top : 2%;
+    align-items: center;
+    /* border: 1px solid red;  */
+}
+.infosClient, .infosTransaction
+{
+    margin-bottom : 2%;
+    padding: 0.5%;
+    display: flex;
+    box-shadow: 0px 3px 4px rgba(3, 3, 66, 0.596);
+    flex-direction: row;
+    border : 1px solid #0069c5;
+    align-items: center;
+    /* justify-content: center; */
+    width : 99%;
+}
+.nomClient, .numeroTel
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    font-size: 120%;
+}
+.imgModif, .imgSuppr
+{
+    width: 10%;
+}
+.imgModif > img, .imgSuppr > img
+{
+    width: 80%;
+}
+.fenetreModifierClient
+{
+    align-items: center;
+    justify-content: center;
+}
+.modalWrapModifierClient
+{
+    background-color: #ffffff;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.modalWrapModifierClient > label , .operateurDepot,  .numeroClient , .montantDepot
+{
+    font-style: italic;
+    color: #007DEB;
+    font-size: 120%;
+}
+
+.modalWrapModifierClient > input , .inputNumeroClient , .inputMontantDepot ,.selectOperateurDepot
+{
+    width: 80%;
+    border: 1px solid #007DEB;
+    font-size: 110%;
+    padding: 2%;
+    border-radius: 5px;
+}
+.modalWrapModifierClient > .btnEnregistrer, .btnEnregistrerDepotSansAncaissement, .btnDebTransc, .btnRetraitEff
+{
+    color: white;
+    background-color: #007DEB;
+    font-size: 120%;
+    padding: 2%;
+    border-radius: 5px;
+}
+.modalWrapModifierClient > .btnAnnuler
+{
+    color: white;
+    background-color: #ff0000;
+    font-size: 120%;
+    padding: 2%;
+    border-radius: 5px;
+}
+.boiteInfosDepot, .eltForm
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2%;
+}
+.eltForm
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 2%;
+}
+.categorieOperateur, .clientNumero, .montantDate
+{
+    display: flex;
+    flex-direction: column;
+    width : calc(100%/3);
+    justify-content: center;
+    align-items: center;
+}
+.categorie, .operateur, .client, .numero, .montant, .date
+{
+    padding: 1%;
+}
+.etatPayement
+{
+    padding: 1%;
+    background-color: #007DEB;
+    color: white;
+    cursor: pointer;
+}
+.fenetreAlerteRetrait, .fenetreAlerteDepot
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.695);
+}
+.boiteAlerte
+{
+    width: 60%;
+    color: red;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    padding: 2%;
+    text-align: center;
+}
+.boiteAlerte > .boiteTitre
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titreTransactionRetrait, .titreTransactionDepot
+{
+    margin: 7px;
+}
+.btnAnnulerR, .btnAnnulerD
+{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 2%;
+}
+@media (max-width : 850px) 
+{
+
+    .boiteDoption
+    {
+        width: 100%;
+    }
+    .boiteDoption > img
+    {
+        width: 160px;
+        height: 160px;
+        margin: 2%;
+    }   
+    
+    .boiteDepotOrange, .boiteDepotMtn, .boiteCaisse 
+    {
+        width: 98%;
+    }
+    .boiteValDefinire
+    {
+        width: 100%;
+    }
+    .boiteValDefinire > input , .boiteValDefinire > select
+    {
+        width: 80%;
+    }
+}
