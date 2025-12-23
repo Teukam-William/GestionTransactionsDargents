@@ -15,7 +15,7 @@
         <div class="boiteIdentification">
             <h2>Identification</h2>
             <br/>
-            <form action="./Vrf/" method="POST">
+            <form action="./Vrf/index.php" method="POST">
                 <label for="nom">Nom</label>
                 <br/>
                 <input type="text" name="nom" id="nom" maxlength="25">
